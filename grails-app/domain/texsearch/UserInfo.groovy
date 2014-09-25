@@ -11,7 +11,7 @@ class UserInfo {
     String information
     static constraints = {
         userName(size: 3..15, unique: true)
-        password()
+        password(size: 6..15)
         registerDate()
         lastLoginDate()
         nickName(size: 3..15, nullable: true)
