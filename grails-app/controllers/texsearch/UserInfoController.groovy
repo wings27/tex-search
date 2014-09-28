@@ -10,7 +10,7 @@ class UserInfoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond UserInfo.list(params), model:[userInfoInstanceCount: UserInfo.count()]
+        respond UserInfo.list(params), model: [userInfoInstanceCount: UserInfo.count()]
     }
 
     def show(UserInfo userInfoInstance) {
@@ -29,11 +29,11 @@ class UserInfoController {
         }
 
         if (userInfoInstance.hasErrors()) {
-            respond userInfoInstance.errors, view:'create'
+            respond userInfoInstance.errors, view: 'create'
             return
         }
 
-        userInfoInstance.save flush:true
+        userInfoInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
@@ -56,18 +56,18 @@ class UserInfoController {
         }
 
         if (userInfoInstance.hasErrors()) {
-            respond userInfoInstance.errors, view:'edit'
+            respond userInfoInstance.errors, view: 'edit'
             return
         }
 
-        userInfoInstance.save flush:true
+        userInfoInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'UserInfo.label', default: 'UserInfo'), userInfoInstance.id])
                 redirect userInfoInstance
             }
-            '*'{ respond userInfoInstance, [status: OK] }
+            '*' { respond userInfoInstance, [status: OK] }
         }
     }
 
@@ -79,14 +79,14 @@ class UserInfoController {
             return
         }
 
-        userInfoInstance.delete flush:true
+        userInfoInstance.delete flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'UserInfo.label', default: 'UserInfo'), userInfoInstance.id])
-                redirect action:"index", method:"GET"
+                redirect action: "index", method: "GET"
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -96,7 +96,7 @@ class UserInfoController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'userInfo.label', default: 'UserInfo'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
 }
