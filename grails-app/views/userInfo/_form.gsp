@@ -20,6 +20,24 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: userInfoInstance, field: 'email', 'error')} ">
+	<label for="email">
+		<g:message code="userInfo.email.label" default="Email" />
+		
+	</label>
+	<g:field type="email" name="email" value="${userInfoInstance?.email}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: userInfoInstance, field: 'gender', 'error')} required">
+	<label for="gender">
+		<g:message code="userInfo.gender.label" default="Gender" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select name="gender" from="${userInfoInstance.constraints.gender.inList}" required="" value="${userInfoInstance?.gender}" valueMessagePrefix="userInfo.gender"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: userInfoInstance, field: 'registerDate', 'error')} required">
 	<label for="registerDate">
 		<g:message code="userInfo.registerDate.label" default="Register Date" />

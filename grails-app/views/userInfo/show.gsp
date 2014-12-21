@@ -41,6 +41,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${userInfoInstance?.email}">
+				<li class="fieldcontain">
+					<span id="email-label" class="property-label"><g:message code="userInfo.email.label" default="Email" /></span>
+					
+						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${userInfoInstance}" field="email"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInfoInstance?.gender}">
+				<li class="fieldcontain">
+					<span id="gender-label" class="property-label"><g:message code="userInfo.gender.label" default="Gender" /></span>
+					
+						<span class="property-value" aria-labelledby="gender-label"><g:fieldValue bean="${userInfoInstance}" field="gender"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${userInfoInstance?.registerDate}">
 				<li class="fieldcontain">
 					<span id="registerDate-label" class="property-label"><g:message code="userInfo.registerDate.label" default="Register Date" /></span>
