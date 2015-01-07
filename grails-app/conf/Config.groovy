@@ -97,11 +97,16 @@ environments {
 
 // log4j configuration
 log4j.main = {
+    root{
+        info()
+    }
     // Example of changing the log pattern for the default console appender:
     //
     appenders {
-        console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+        console name:'stdout', layout:pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss} [%t] [%p] %c - %m%n')
     }
+
+    info 'org.apache.catalina'
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
