@@ -1,4 +1,4 @@
-package texsearch
+package org.queuestack.texsearch
 
 class UserInfo {
 

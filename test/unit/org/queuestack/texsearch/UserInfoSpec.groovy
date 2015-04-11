@@ -1,4 +1,4 @@
-package texsearch
+package org.queuestack.texsearch
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification

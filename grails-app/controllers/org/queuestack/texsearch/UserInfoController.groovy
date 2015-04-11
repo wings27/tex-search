@@ -1,6 +1,4 @@
-package texsearch
-
-
+package org.queuestack.texsearch
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional

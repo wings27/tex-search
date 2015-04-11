@@ -1,5 +1,5 @@
 
-<%@ page import="texsearch.UserInfo" %>
+<%@ page import="org.queuestack.texsearch.UserInfo" %>
 <!DOCTYPE html>
 <html>
 	<head>
