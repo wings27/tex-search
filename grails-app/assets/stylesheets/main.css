@@ -384,13 +384,13 @@ fieldset.embedded legend {
 
 /* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
 
-input:invalid, select:invalid, textarea:invalid {
+input.touched:invalid, select.touched:invalid, textarea.touched:invalid {
 	background: #fff3f3;
 	border-color: #ffaaaa;
 	color: #cc0000;
 }
 
-input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
+input.touched:invalid:focus, select.touched:invalid:focus, textarea.touched:invalid:focus {
 	   -moz-box-shadow: 0 0 0.5em #ffaaaa;
 	-webkit-box-shadow: 0 0 0.5em #ffaaaa;
 	        box-shadow: 0 0 0.5em #ffaaaa;

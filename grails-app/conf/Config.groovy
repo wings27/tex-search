@@ -100,10 +100,8 @@ log4j.main = {
     root{
         info()
     }
-    // Example of changing the log pattern for the default console appender:
-    //
     appenders {
-        console name:'stdout', layout:pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss} [%t] [%p] %c - %m%n')
+        console name:'stdout', layout:pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss} [%p] %c - %m%l%n')
     }
 
     info 'org.apache.catalina'
