@@ -1,5 +1,6 @@
 /**
- * Created by Wings on 2015/3/29 0029.
+ * Project TexSearch
+ * Created by Wings on 2015/3/29 0029 0:15
  */
 
 var $invalidInput = $('input:invalid, select:invalid, textarea:invalid');
